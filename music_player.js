@@ -18,7 +18,7 @@ const VolumeSlider = document.getElementById("volumeslider");
 const songs = [
     {
         image:"/IMG/Zora's Domain - Day (The Legend of Zelda; Breath of the Wild OST) (BQ).jpg",
-        name:"Zora's Domain - Day (The Legend of Zelda: Breath of the Wild OST)",
+        name:"Zora's Domain - Day (The Legend of Zelda BOTW)",
         artist:"Manaka Kataoka, Yasuaki Iwata, and Hajime Wakai",
         audio:"/Music/Zora's Domain - Day (The Legend of Zelda; Breath of the Wild OST) (128kbit_AAC).m4a"
     },
