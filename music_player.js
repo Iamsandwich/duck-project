@@ -178,7 +178,7 @@ VolumeSlider.addEventListener("change", function(){
 function changeVolume(){
     VolumeSlider.value = audio.volume;
     if (VolumeSlider.value == 0){
-        audio.muted = true;
+    audio.muted = true;
     console.log("audio muted");
     document.getElementById("volumelol").innerHTML = '<img id="volumebutton" src="img/muted.png" alt="volume">';
     }
@@ -186,7 +186,6 @@ function changeVolume(){
      console.log("audio unmuted");
      document.getElementById("volumelol").innerHTML = '<img id="volumebutton" src="img/volume.png" alt="volume">';
      audio.muted = false;
-
     }
 };
 
@@ -212,6 +211,8 @@ VolumeButton.addEventListener("click", function(){
 
 setInterval(moveSlider, 1000);
 setInterval(CurrentTime, 1000);
+setInterval(changeVolume, 1000);
+
 
 
 
