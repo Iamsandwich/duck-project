@@ -30,6 +30,13 @@ const songs = [
         audio:"/Music/11. Secret of the Forest.mp3"
     },
 
+    {
+        image:"/IMG/risk of rain.jpg",
+        name:"Risk of Rain: Chanson d'Automne",
+        artist:"Chirs Christodoulou",
+        audio:"/Music/musicStage4.ogg"
+    },
+
 ];
 
 const audio = document.createElement("audio");
@@ -68,7 +75,6 @@ PauseButton.addEventListener("click", function(){
 loopButton.addEventListener("click", function(){
     if (audio.loop == false){
     audio.loop = true;
-    currentSongIndex--;
     console.log(currentSongIndex);
     console.log("loopin");
     document.getElementById("loopbuttonimg").innerHTML = '<img id="loopsong" src="img/looping.gif" alt="looping gif button">';
@@ -139,7 +145,7 @@ const SongTime = audio.currentTime;
 
 function CurrentTime(){
 
-    if (SongSlider.value > SongSlider.max-1%SongSlider.max && currentSongIndex != songs.length){
+    if (SongSlider.value > SongSlider.max-1%SongSlider.max && currentSongIndex != songs.length && audio.loop == false){
     console.log("song ended!"); 
     currentSongIndex++;
     updateSong();
@@ -152,7 +158,7 @@ function CurrentTime(){
 SongSlider.addEventListener("change", function(){
 
 
-    if (SongSlider.value > SongSlider.max-1%SongSlider.max && currentSongIndex != songs.length){
+    if (SongSlider.value > SongSlider.max-1%SongSlider.max && currentSongIndex != songs.length && audio.loop == false){
     console.log("song ended!"); 
     currentSongIndex++;
     updateSong();
