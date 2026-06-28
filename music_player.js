@@ -209,7 +209,7 @@ VolumeButton.addEventListener("click", function(){
 
 
 
-setInterval(changeVolume, 1000);
+
 setInterval(moveSlider, 1000);
 setInterval(CurrentTime, 1000);
 
