@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="IMG/play button.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Duck project</title>
+
+</head>
+<body>
+    
+
+<div class="player">
+
+    <img id="songimage" src="img/">
+    <div class="songinfo">
+        <div class="nowplaying">Now Playing:</div>
+        <div id="songname">Name: </div>
+        <br>
+    <div class="nowplaying">Artist:</div>
+    <div id="artistname">Artist: </div>
+</div>
+    
+    <div class="sliderandbuttons">
+    <input id="slidersong" type="range" step="any" min="0" max="100">
+   <div id="volumelol"><img id="volumebutton" src="img/volume.png" alt="volume"></div> <input id="volumeslider" type="range" step="0.001" min="0" max="1"></div>
+
+    <div id="musicbuttons">
+        <div id="shufflingimg"><img id="shufflesong" src="img/shuffle button off.png" alt="shuffle button"></div>
+        <img id="previoussong" src="img/back button.png" alt="previous button">
+        <img id="playsong" src="img/play button.png" alt="play button">
+        <img id="pausesong" src="img/pause button.png" alt="pause button">
+        <img id="nextsong" src="img/forward button.png" alt="next button">
+        <div id="loopbuttonimg"><img id="loopsong" src="img/loop button.png" alt="loop button"></div> 
+    </div>
+
+    </div>
+    
+    <div class="audio">
+        <script src="music_player.js"></script>
+    </div>
+</div>
+
+
+<div class="ducks">
+   <button onclick="load1()">1</button>
+   <button onclick="load2()">2</button>
+   <button onclick="load3()">3</button>
+   <button onclick="load4()">4</button>
+</div>
+
+<div class="image">
+    <img src="img/the floating duck.gif" alt="the floating duck">
+</div>
+
+</body>
+</html>

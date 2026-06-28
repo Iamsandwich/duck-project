@@ -1,0 +1,124 @@
+body {
+    background-color: rgb(255, 190, 93);
+}
+
+.player{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(236, 156, 34);
+    border: solid black 1px;
+    border-radius: 2px;
+    width: 60vw;
+    height: fit-content;
+    text-align: left;
+}
+
+#slidersong{
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 30vw;
+    height: 0.5em;
+    border: solid black 1px;
+    background: rgb(7, 7, 7);
+}
+
+
+#volumeslider{
+     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 10vw;
+    height: 0.5em;
+    border: solid black 1px;
+    background: rgb(7, 7, 7);
+}
+
+#slidersong::-webkit-slider-thumb, #volumeslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: rgb(255, 152, 78);
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+}
+
+#slidersong::-webkit-progress-value{
+    background-color: rgb(210, 103, 22);
+}
+
+
+.songinfo{
+    font-family: monospace;
+    display: inline-block;
+    font-size: 0.5vw;
+    margin: 1vw;
+    position: relative;
+    top: -4vw;
+    
+}
+
+#songname, #artistname{
+font-size: 1vw;
+}
+
+.sliderandbuttons{
+    text-align: center;
+}
+
+.nowplaying{
+    font-style: oblique;
+    font-size: 1vw;
+}
+
+#songimage{
+    height: 10vw;
+    margin: 1vw;
+    display: inline-block;
+}
+
+.image{
+    position: relative;
+    text-align: right;
+    margin-right:auto;
+    margin-top: 5vh;
+    z-index: 2;
+}
+
+.image img{
+
+    margin-top: -30vh;
+    width: 30vw;
+   
+}
+
+#volumelol{
+    display: inline-block;
+}
+
+.ducks{
+    margin-top: 1em;
+    position: relative;
+    display: inline-block;
+}
+
+.ducks button{
+    margin-right: 1em;
+    width: 10vw;
+    height: 10vw;
+}
+
+#musicbuttons{
+    text-align: center;
+}
+
+#shufflesong{
+    position: relative;
+    bottom: -0.2vw;
+}
+
+#loopbuttonimg, #shufflingimg{
+    display:inline-block
+}
