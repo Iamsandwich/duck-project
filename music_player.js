@@ -37,6 +37,36 @@ const songs = [
         audio:"/Music/musicStage4.ogg"
     },
 
+     {
+        image:"/IMG/Donkey Kong Country 2 Bramble Blast.jpg",
+        name:"Donkey Kong Country 2, Bramble Blast",
+        artist:"David Wise",
+        audio:"/Music/Donkey Kong Country 2 Soundtrack; Bramble Blass.mp3"
+    },
+
+     {
+        image:"/IMG/Donkey Kong Country - Aquatic Ambience.jpg",
+        name:"Donkey Kong Country, Aquatic Ambience",
+        artist:"Manfred Minnich & Manfred Minnich Strings",
+        audio:"/Music/Donkey Kong Country - Aquatic Ambience [Restored] (152kbit_Opus).opus"
+    },
+
+     {
+        image:"/IMG/Pokémon Diamond, Pearl & Platinum - Prof Rowan Laboratory .jpg",
+        name:"Pokemon DPP, Prof Rowan Lab",
+        artist:"Junichi Masuda, Gō Ichinose, Morikazu",
+        audio:"/Music/Pokémon Diamond, Pearl & Platinum - Prof Rowan Laboratory Music (HQ) (128kbit_AAC).m4a"
+    },
+
+     {
+        image:"/IMG/Mario Paint Music - BGM 3 (HQ).jpg",
+        name:"Mario Paint - BGM3",
+        artist:"Hirokazu Tanaka, Ryoji Yoshitomi, and Kazumi Totaka",
+        audio:"/Music/Mario Paint Music - BGM 3 (128kbit_AAC).m4a"
+    },
+
+
+
 ];
 
 const audio = document.createElement("audio");
@@ -55,7 +85,7 @@ PreviousButton.addEventListener("click", function(){
 
 NextButton.addEventListener("click", function(){
    if (currentSongIndex == songs.length - 1){
-    return;
+    currentSongIndex = -1;
    }
    currentSongIndex++;
    updateSong();
@@ -90,6 +120,7 @@ loopButton.addEventListener("click", function(){
 
 
 let shuffle = 0;
+
 ShuffleButton.addEventListener("click", function(){
     if (shuffle == 0){
 shuffle = 1;
@@ -151,6 +182,11 @@ function CurrentTime(){
     updateSong();
     audio.play();
     }
+    else if (SongSlider.value > SongSlider.max-1%SongSlider.max && currentSongIndex == songs.length && audio.loop == false){
+    currentSongIndex = 0;
+    updateSong();
+    audio.play();
+    }
     
     return;
 }
@@ -164,7 +200,12 @@ SongSlider.addEventListener("change", function(){
     updateSong();
     audio.play();
     }
-    return;
+    else if (SongSlider.value > SongSlider.max-1%SongSlider.max && currentSongIndex == songs.length && audio.loop == false){
+    currentSongIndex = 0;
+    updateSong();
+    audio.play();
+    }
+        return;
 });
 
 
