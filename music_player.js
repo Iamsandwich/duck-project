@@ -15,7 +15,7 @@ const ShuffleButton = document.getElementById("shufflingimg");
 const VolumeButton = document.getElementById("volumelol");
 const VolumeSlider = document.getElementById("volumeslider");
 
-const songs = [
+var songs = [
     {
         image:"/IMG/Zora's Domain - Day (The Legend of Zelda; Breath of the Wild OST) (BQ).jpg",
         name:"Zora's Domain - Day (The Legend of Zelda BOTW)",
@@ -119,19 +119,42 @@ loopButton.addEventListener("click", function(){
 });
 
 
-let shuffle = 0;
+let shuffling = 0;
+function shuffle(array) {
+  let currentIndex = array.length;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+}
+let shuffledarray = songs;
+var randomsongs = songs.slice();
+var propersongs = songs.slice();
+console.log(randomsongs);
 
 ShuffleButton.addEventListener("click", function(){
-    if (shuffle == 0){
-shuffle = 1;
+    if (shuffling == 0){
+shuffling = 1;
+songs = randomsongs;
+shuffle(songs);
+console.log(songs);
 console.log("shuffling");
 document.getElementById("shufflingimg").innerHTML = '<img id="shufflesong" src="img/shuffle button on.png" alt="shuffle on button">';
 
 
-} else if (shuffle == 1){
-  
+} else if (shuffling == 1){
+  songs = propersongs;
+  console.log(songs);
   console.log("unshuffling");
-  shuffle = 0;
+  shuffling = 0;
   document.getElementById("shufflingimg").innerHTML = '<img id="shufflesong" src="img/shuffle button off.png" alt="shuffle off button">';
 }
 });
