@@ -231,6 +231,22 @@ SongSlider.addEventListener("change", function(){
         return;
 });
 
+function EndSongWhenZero(){
+    if (audio.duration == SongSlider.value && currentSongIndex != songs.length && audio.loop == false){
+            console.log("song is on 0, time to move on"); 
+    currentSongIndex++;
+    updateSong();
+    audio.play();
+    }
+
+    else if (audio.duration == SongSlider.value && currentSongIndex == songs.length && audio.loop == false){
+    console.log("song is on 0, time to move on to first song"); 
+        currentSongIndex = 0;
+    updateSong();
+    audio.play();
+    }
+        return;
+};
 
 
 VolumeSlider.addEventListener("change", function(){
