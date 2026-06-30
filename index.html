@@ -70,8 +70,20 @@
     </audio>
    </button>
 
-   <button >3</button>
-   <button >4</button>
+   <button onclick="Play3()">
+    Train 
+    <audio class="soundeffects" id="train" loop="true" src="/Soundscapes/Train sounds for sleeping Relaxing train sounds Summer and winter 30 min Fast sleeping White noise (128kbit_AAC).m4a">
+
+    </audio>
+
+   </button>
+   <button onclick="Play4()">
+       Fireplace 
+    <audio class="soundeffects" id="fireplace" loop="true" src="/Soundscapes/5 minutes of Relaxing Fireplace Sounds - Burning Fireplace & Crackling Fire Sounds (NO MUSIC) (160kbit_Opus).opus">
+
+    </audio>
+
+   </button>
 <script src="effects.js"></script>
   
 </div>
@@ -114,6 +126,36 @@ function Play2(){
  rainnoise.pause();
  rainplay = 0;
  console.log("no rain for me");
+ }
+}
+
+var trainplay = 0;
+var trainnoise = document.getElementById("train");
+function Play3(){
+    if (trainplay==0){
+ trainnoise.play();
+ trainplay = 1;
+ console.log("the train goes choochoo");
+}
+ else if (trainplay==1){
+ trainnoise.pause();
+ trainplay = 0;
+ console.log("no train for me");
+ }
+}
+
+var fireplaceplay = 0;
+var fireplaceaudio = document.getElementById("fireplace");
+function Play4(){
+    if (fireplaceplay==0){
+ fireplaceaudio.play();
+ fireplaceplay = 1;
+ console.log("the fireplace is lit");
+}
+ else if (fireplaceplay==1){
+ fireplaceaudio.pause();
+ fireplaceplay = 0;
+ console.log("no fireplace for me");
  }
 }
 </script>
