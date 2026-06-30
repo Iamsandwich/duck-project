@@ -47,12 +47,36 @@
 </div>
 
 
-<div class="ducks">
-   <button onclick="load1()">1</button>
-   <button onclick="load2()">2</button>
-   <button onclick="load3()">3</button>
-   <button onclick="load4()">4</button>
+<div class="ducks" id="effectscontainer">
+
+    
+<div id="imnoise">
+    <input id="slidereffects" type="range" step="0.001" min="0" max="1" value="0.5">
 </div>
+
+   <button onclick="Play1()">
+    Waves 
+    <audio class="soundeffects" id="waves" loop="true" src="/Soundscapes/30 min relaxing ocean waves - high quality sound - no music - HD video of a beautiful misty beach (128kbit_AAC).m4a">
+
+    </audio>
+
+    </button>
+
+
+   <button onclick="Play2()">
+    Rain 
+    <audio class="soundeffects" id="rain" loop="true" src="/Soundscapes/5 Minutes of Rain and Thunderstorm.m4a">
+
+    </audio>
+   </button>
+
+   <button >3</button>
+   <button >4</button>
+<script src="effects.js"></script>
+  
+</div>
+
+
 
 <div class="image">
     <img src="img/the floating duck.gif" alt="the floating duck">
@@ -60,3 +84,36 @@
 
 </body>
 </html>
+
+
+<script>
+var waveplay = 0;
+var thenoise = document.getElementById("waves");
+function Play1(){
+    if (waveplay==0){
+ thenoise.play();
+ waveplay = 1;
+ console.log("the waves they swoosh");
+}
+ else if (waveplay==1){
+ thenoise.pause();
+ waveplay = 0;
+ console.log("no waves for me");
+ }
+};
+
+var rainplay = 0;
+var rainnoise = document.getElementById("rain");
+function Play2(){
+    if (rainplay==0){
+ rainnoise.play();
+ rainplay = 1;
+ console.log("the rain falls down");
+}
+ else if (rainplay==1){
+ rainnoise.pause();
+ rainplay = 0;
+ console.log("no rain for me");
+ }
+}
+</script>

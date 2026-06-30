@@ -24,7 +24,7 @@ body {
 }
 
 
-#volumeslider{
+#volumeslider, #slidereffects{
      -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -34,7 +34,7 @@ body {
     background: rgb(7, 7, 7);
 }
 
-#slidersong::-webkit-slider-thumb, #volumeslider::-webkit-slider-thumb {
+#slidersong::-webkit-slider-thumb, #volumeslider::-webkit-slider-thumb, #slidereffects::-webkit-slider-thumb {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;

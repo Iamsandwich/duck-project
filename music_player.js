@@ -15,6 +15,9 @@ const ShuffleButton = document.getElementById("shufflingimg");
 const VolumeButton = document.getElementById("volumelol");
 const VolumeSlider = document.getElementById("volumeslider");
 
+
+
+//Remeber! Ipads hate Ogg. Everything else they seem fine with tho, go on ahead
 var songs = [
     {
         image:"/IMG/Zora's Domain - Day (The Legend of Zelda; Breath of the Wild OST) (BQ).jpg",
@@ -65,6 +68,12 @@ var songs = [
         audio:"/Music/Mario Paint Music - BGM 3 (128kbit_AAC).m4a"
     },
 
+    {
+        image:"/IMG/Flying horses.jpg",
+        name:"Летающие Лошадки (Flying Horses)",
+        artist:"S. and T. Nikitiny",
+        audio:"/Music/Сергей и Татьяна Никитины «Летающие лошади» (128kbit_AAC).m4a"
+    },
 
 
 ];
@@ -174,6 +183,8 @@ function updateSong() {
     audio.onloadedmetadata = function (){
     SongSlider.value = 0;
     SongSlider.max = audio.duration;
+
+    
 
     
 
