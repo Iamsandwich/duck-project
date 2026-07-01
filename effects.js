@@ -1,21 +1,39 @@
-const ESlider = document.getElementById("slidereffects");
-var Eaudio = document.getElementById("waves");
-var Eaudio2 = document.getElementById("rain");
-var Eaudio3 = document.getElementById("train");
-var Eaudio4 = document.getElementById("fireplace");
+const WavesSlider = document.getElementById("sliderwaves");
+var waveaudio = document.getElementById("waves");
 
-console.log(ESlider);
-console.log(Eaudio2);
-console.log(Eaudio3);
-console.log(Eaudio4);
-console.log(Eaudio);
+const RainSlider = document.getElementById("sliderrain");
+var rainaudio = document.getElementById("rain");
+
+const trainSlider = document.getElementById("slidertrain");
+var trainaudio = document.getElementById("train");
+
+const FireSlider = document.getElementById("sliderfire");
+var fireplaceaudio = document.getElementById("fireplace");
+
+console.log(WavesSlider);
+console.log(RainSlider);
+console.log(trainSlider);
+console.log(FireSlider);
 
 
 
-ESlider.addEventListener("change", function(){
-    Eaudio.volume = ESlider.value;
-    Eaudio2.volume = ESlider.value;
-    Eaudio3.volume = ESlider.value;
-    Eaudio4.volume = ESlider.value;
-    console.log(ESlider.value);
+
+WavesSlider.addEventListener("change", function(){
+    waveaudio.volume = WavesSlider.value;
+    console.log(WavesSlider.value);
+});
+
+RainSlider.addEventListener("change", function(){
+    rainaudio.volume = RainSlider.value;
+    console.log(RainSlider.value);
+});
+
+trainSlider.addEventListener("change", function(){
+    trainaudio.volume = trainSlider.value;
+    console.log(trainSlider.value);
+});
+
+FireSlider.addEventListener("change", function(){
+    fireplaceaudio.volume = FireSlider.value;
+    console.log(FireSlider.value);
 });

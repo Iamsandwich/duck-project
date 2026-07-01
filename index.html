@@ -49,41 +49,65 @@
 
 <div class="ducks" id="effectscontainer">
 
-    
-<div id="imnoise">
-    <input id="slidereffects" type="range" step="0.001" min="0" max="1" value="0.5">
-</div>
+<div class="effectslider" id="imnoise">
+    <input id="sliderwaves" type="range" step="0.001" min="0" max="1" value="0.5">
 
    <button onclick="Play1()">
-    Waves 
+    <div id="changewave">
+    <img id="wavesicon" src="img/dark waves icon.png" alt="dark waves icon"> 
+    </div>
     <audio class="soundeffects" id="waves" loop="true" src="/Soundscapes/30 min relaxing ocean waves - high quality sound - no music - HD video of a beautiful misty beach (128kbit_AAC).m4a">
 
     </audio>
 
     </button>
+</div>
 
 
+<div class="effectslider">
+    <input id="sliderrain" type="range" step="0.001" min="0" max="1" value="0.5">
    <button onclick="Play2()">
-    Rain 
+
+    <div id="changerain">
+    <img src="img/dark rain icon.png" alt="dark rain icon"> 
+    </div>
     <audio class="soundeffects" id="rain" loop="true" src="/Soundscapes/5 Minutes of Rain and Thunderstorm.m4a">
 
     </audio>
    </button>
+</div>
 
+
+<div class="effectslider">
+    <input id="slidertrain" type="range" step="0.001" min="0" max="1" value="0.5">
    <button onclick="Play3()">
-    Train 
+
+    <div id="changetrain">
+    <img src="img/dark train icon.png" alt="dark train icon"> 
+    </div>
     <audio class="soundeffects" id="train" loop="true" src="/Soundscapes/Train sounds for sleeping Relaxing train sounds Summer and winter 30 min Fast sleeping White noise (128kbit_AAC).m4a">
 
     </audio>
+</button>
 
-   </button>
+</div>
+
+
+ <div class="effectslider">
+    <input id="sliderfire" type="range" step="0.001" min="0" max="1" value="0.5">
    <button onclick="Play4()">
-       Fireplace 
+    <div id="changefire">
+       <img src="img/dark fireplace icon.png" alt="dark fireplace icon"> 
+    </div>
     <audio class="soundeffects" id="fireplace" loop="true" src="/Soundscapes/5 minutes of Relaxing Fireplace Sounds - Burning Fireplace & Crackling Fire Sounds (NO MUSIC) (160kbit_Opus).opus">
 
     </audio>
 
    </button>
+
+   </div>
+
+
 <script src="effects.js"></script>
   
 </div>
@@ -106,11 +130,14 @@ function Play1(){
  thenoise.play();
  waveplay = 1;
  console.log("the waves they swoosh");
+ document.getElementById("changewave").innerHTML='<img id="wavesicon" src="img/waves icon.png" alt="waves icon">'
 }
  else if (waveplay==1){
  thenoise.pause();
  waveplay = 0;
  console.log("no waves for me");
+ document.getElementById("changewave").innerHTML='<img id="wavesicon" src="img/dark waves icon.png" alt="darkened waves icon">'
+
  }
 };
 
@@ -121,11 +148,13 @@ function Play2(){
  rainnoise.play();
  rainplay = 1;
  console.log("the rain falls down");
+ document.getElementById("changerain").innerHTML='<img src="img/rain icon.png" alt="train icon">';
 }
  else if (rainplay==1){
  rainnoise.pause();
  rainplay = 0;
  console.log("no rain for me");
+ document.getElementById("changerain").innerHTML='<img src="img/dark rain icon.png" alt="dark train icon">';
  }
 }
 
@@ -136,11 +165,13 @@ function Play3(){
  trainnoise.play();
  trainplay = 1;
  console.log("the train goes choochoo");
+ document.getElementById("changetrain").innerHTML='<img src="img/train icon.png" alt="train icon">';
 }
  else if (trainplay==1){
  trainnoise.pause();
  trainplay = 0;
  console.log("no train for me");
+ document.getElementById("changetrain").innerHTML='<img src="img/dark train icon.png" alt="dark train icon">';
  }
 }
 
@@ -151,11 +182,13 @@ function Play4(){
  fireplaceaudio.play();
  fireplaceplay = 1;
  console.log("the fireplace is lit");
+ document.getElementById("changefire").innerHTML='<img src="img/fireplace icon.png" alt="fire icon">';
 }
  else if (fireplaceplay==1){
  fireplaceaudio.pause();
  fireplaceplay = 0;
  console.log("no fireplace for me");
+document.getElementById("changefire").innerHTML='<img src="img/dark fireplace icon.png" alt="dark fire icon">';
  }
 }
 </script>

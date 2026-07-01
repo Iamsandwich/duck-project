@@ -24,7 +24,7 @@ body {
 }
 
 
-#volumeslider, #slidereffects{
+#volumeslider, #sliderwaves, #sliderrain, #slidertrain, #sliderfire{
      -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -32,6 +32,13 @@ body {
     height: 0.5em;
     border: solid black 1px;
     background: rgb(7, 7, 7);
+    display: inline-block;
+}
+
+#sliderwaves, #sliderrain, #slidertrain, #sliderfire{
+    background-color: rgb(149, 77, 38);
+     border: solid black 2px;
+     border-radius: 5px;
 }
 
 #slidersong::-webkit-slider-thumb, #volumeslider::-webkit-slider-thumb, #slidereffects::-webkit-slider-thumb {
@@ -102,12 +109,21 @@ font-size: 1vw;
     margin-top: 1em;
     position: relative;
     display: inline-block;
+    color: transparent;
 }
 
+
 .ducks button{
-    margin-right: 1em;
-    width: 10vw;
-    height: 10vw;
+
+    margin-top: 1em;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+}
+
+.ducks img{
+    width: 7vw;
+    text-align: center;
 }
 
 #musicbuttons{
@@ -121,4 +137,15 @@ font-size: 1vw;
 
 #loopbuttonimg, #shufflingimg{
     display:inline-block
+}
+
+.effectslider{
+    display: inline-block;
+    text-align: center;
+}
+
+#sliderwaves, #sliderrain, #slidertrain, #sliderfire{
+    position: relative;
+    display: block;
+    text-align: center;
 }
