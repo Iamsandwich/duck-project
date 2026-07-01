@@ -40,6 +40,20 @@ var songs = [
         audio:"/Music/musicStage4.mp3"
     },
 
+    {
+        image:"/IMG/risk of rain.jpg",
+        name:"Risk of Rain: Dew Point",
+        artist:"Chirs Christodoulou",
+        audio:"/Music/Dew Point - ROR.mp3"
+    },
+
+    {
+        image:"/IMG/risk of rain.jpg",
+        name:"Risk of Rain: Cyclogenesis",
+        artist:"Chirs Christodoulou",
+        audio:"/Music/Cyclogenesis - ROR.mp3"
+    },
+
      {
         image:"/IMG/Donkey Kong Country 2 Bramble Blast.jpg",
         name:"Donkey Kong Country 2, Bramble Blast",
@@ -74,6 +88,28 @@ var songs = [
         artist:"S. and T. Nikitiny",
         audio:"/Music/Сергей и Татьяна Никитины «Летающие лошади» (128kbit_AAC).m4a"
     },
+
+    {
+        image:"/IMG/hack link bullshit.jpg",
+        name:"hack//Link - Atoli #7",
+        artist:"Chikayo Fukuda",
+        audio:"/Music/hack Link (Atoli) (128kbit_AAC).m4a"
+    },
+
+    {
+        image:"/IMG/zelda link to the past.jpg",
+        name:"Legend of Zelda LTTP The Darkness and the Light remix",
+        artist:"MkVaff",
+        audio:"/Music/Legend of Zelda A Link to the Past 'The Darkness and the Light' [Ending] by MkVaff.opus"
+    },
+
+    {
+        image:"/IMG/Song of Storms - Zelda; Ocarina of Time (Gingertail Cover) (BQ).jpg",
+        name:"Legend of Zelda Song Of Storms - Gingertail cover",
+        artist:"Alina Gingertail",
+        audio:"/Music/Song of Storms - Zelda; Ocarina of Time (Gingertail Cover) (152kbit_Opus).opus"
+    },
+
 
 
 ];
